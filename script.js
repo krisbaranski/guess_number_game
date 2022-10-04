@@ -2,7 +2,7 @@
 
 const again = document.querySelector('.again');
 const check = document.querySelector('.check');
-// The Driest Script i can ;-)
+
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
@@ -30,6 +30,7 @@ check.addEventListener('click', function () {
   //   when there is no input
   if (!guess) {
     displayMessage('No number!');
+
     //  when player wins
   } else if (guess === secretNumber) {
     displayMessage('Correct Number!');
@@ -44,6 +45,7 @@ check.addEventListener('click', function () {
       score--;
       document.querySelector('.score').textContent = score;
     }
+
     // guess is wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
